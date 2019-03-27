@@ -1,0 +1,10 @@
+#!/bin/bash
+
+curl -L https://raw.githubusercontent.com/coin8086/vim-settings/master/vimrc -o ~/.vimrc
+curl -L https://raw.githubusercontent.com/coin8086/bash-settings/master/bash_aliases -o ~/.bash_aliases
+echo "
+stty -ixon
+export EDITOR=vim
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+" >> ~/.bashrc
+. ~/.bashrc
